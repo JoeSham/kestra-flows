@@ -1,4 +1,5 @@
 import os
+import logging
 import tweepy
 import psycopg2
 from psycopg2.extras import execute_values
