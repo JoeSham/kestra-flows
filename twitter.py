@@ -25,6 +25,8 @@ yesterday = now - timedelta(days=1)
 # Construct the database connection string
 conn_str = f"dbname='{db_name}' user='{db_user}' password='{db_password}' host='{db_host}' port='{db_port}'"
 
+logging.info(conn_str)
+
 # Connect to the PostgreSQL database
 conn = psycopg2.connect(conn_str)
 cursor = conn.cursor()
