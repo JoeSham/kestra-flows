@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
 db_user = os.getenv('DB_USER')
 db_password = os.getenv('DB_PASSWORD')
-db_name = os.getenv('DB_NAME', 'postgres')  # Default to 'postgres' if not specified
-db_host = os.getenv('DB_HOST', 'localhost')  # Default to 'localhost' if not specified
+db_name = os.getenv('DB_NAME', 'main')
+db_host = os.getenv('DB_HOST', 'postgres')
 db_port = os.getenv('DB_PORT', '5432')  # Default to '5432' if not specified
 
 # Set up Twitter client
