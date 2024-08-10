@@ -5,12 +5,15 @@ import psycopg2
 from psycopg2.extras import execute_values
 from datetime import datetime, timedelta
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # Get environment variables
 bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
 db_user = os.getenv('DB_USER')
 db_password = os.getenv('DB_PASSWORD')
-db_name = os.getenv('DB_NAME', 'main')
-db_host = os.getenv('DB_HOST', 'localhost')
+db_name = os.getenv('DB_NAME', 'kestra')  # Default to 'postgres' if not specified
+db_host = os.getenv('DB_HOST', 'postgres')  # Default to 'localhost' if not specified
 db_port = os.getenv('DB_PORT', '5432')  # Default to '5432' if not specified
 
 # Set up Twitter client
