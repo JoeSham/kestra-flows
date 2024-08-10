@@ -5,8 +5,8 @@ import psycopg2
 from psycopg2.extras import execute_values
 from datetime import datetime, timedelta
 
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # Get environment variables
 bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
